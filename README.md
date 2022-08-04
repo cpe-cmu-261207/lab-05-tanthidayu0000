@@ -1,4 +1,4 @@
-# lab 05 : HTML JavaScript DOM Programming 
+# lab 05 : HTML JavaScript DOM Programming
 
 หลังจากน.ศ. clone repo แล้ว ให้ทำตามขั้นตอนดังนี้
 
@@ -8,4 +8,4 @@ https://o365cmu-my.sharepoint.com/:b:/g/personal/chayanin_s_cmu_ac_th1/EaPu0VTki
 
 ใส่ GitHub page URL ด้านล่างนี้
 
-[YOUR GITHUB PAGE URL]
+[https://cpe-cmu-261207.github.io/lab-05-tanthidayu0000/]
