@@ -1,11 +1,13 @@
 const inputAdd = document.getElementById("input-add-todo");
 const todoCtn = document.getElementById("todo-container");
+let sequence = true;
 
 inputAdd.onkeyup = (event) => {
   sequence = true;
   if (event.key !== "Enter") {
     return;
-  } else {
+  } else if (event.key === "Enter") {
+    console.log(inputAdd.value);
     if (inputAdd.value === "") {
       alert("Todo cannot be empty");
     } else {
@@ -13,6 +15,7 @@ inputAdd.onkeyup = (event) => {
       inputAdd.value = "";
     }
   }
+
   saveTodo();
 };
 
@@ -31,16 +34,16 @@ function addTodo(title, completed) {
   const doneBtn = document.createElement("button");
   doneBtn.innerText = "Done";
   doneBtn.className = "btn btn-success me-2";
+  doneBtn.style.display = "none";
 
   //create delete button
   const deleteBtn = document.createElement("button");
   deleteBtn.innerText = "Delete";
   deleteBtn.className = "btn btn-danger";
-
   deleteBtn.style.display = "none";
 
   //append todo to HTML...
-  div.appendChild(children);
+  div.appendChild(span);
   div.appendChild(doneBtn);
   div.appendChild(deleteBtn);
   if (sequence === true) {
@@ -71,7 +74,7 @@ function addTodo(title, completed) {
     } else if (completed == true) {
       completed = false;
     }
-    children.style.textDecoration = completed ? "line-through" : "";
+    span.style.textDecoration = completed ? "line-through" : "";
     saveTodo();
   };
 }
